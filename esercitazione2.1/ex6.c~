@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+int main(){
+	int i=10,j=-1;
+	char *p,*q;
+	char a,b;
+	a=(char) i;
+	b=(char) j;
+	p=&a;
+	q=&b;
+	q=p;
+	i=(int)*p;
+	j=(int)*q;
+	
+
+
+
+
+
+	printf("%d==%d\n",i,j);
+
+}

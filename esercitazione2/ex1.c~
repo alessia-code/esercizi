@@ -1,0 +1,11 @@
+#include <stdio.h>
+ int main(){
+	char c;
+	int i= sizeof(int);
+	short s;
+	long l;
+	float f;
+	double d;
+	printf("%d",i);
+	
+} 
