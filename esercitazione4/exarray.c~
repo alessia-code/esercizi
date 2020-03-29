@@ -68,7 +68,7 @@ printf("esco dal vec_print\n");
    /********************************************************
    *                    TEST vec_rec  v3                *
    ********************************************************/
-   /*printf("Calcolo il vettore v3 a meno delle ricorrenze dei valori in v4...\n\n");
+printf("Calcolo il vettore v3 a meno delle ricorrenze dei valori in v4...\n\n");
    double* v4=( double *) malloc (dim3*sizeof(double));
    v4[0]= 4.8;
    v4[1]= 0.5;
@@ -79,7 +79,6 @@ printf("esco dal vec_print\n");
    vec_print(v2_rec, dim3);
    printf("\n");
    free(v2_rec);
-   */
 
   return 0;
 }
@@ -101,7 +100,7 @@ return;
 }
 //funzione per somma 
 double* vec_sum(double v[], int dim){
-double summ[dim];
+double* summ=(double*) calloc(dim, sizeof(double));
 double somma=0.0;
 for (int y=0; y<dim; y++){
 	for (int n=y; n<dim; n++){
@@ -113,7 +112,21 @@ for (int y=0; y<dim; y++){
 }
 return summ;
 }
-
+// 3.14 ultima funzione
+double* vec_rec(double v1[], double v2[], int dim1, int dim2){
+double* Somma=(double*) calloc(dim1,sizeof(double));
+double occorrenza=0.0;
+for (int g=0; g<dim1; g++){
+	occorrenza=v1[g];
+	for (int h=0; h<dim2; h++){
+		if (v2[h]==occorrenza){
+			Somma[g]=occorrenza;
+			break;
+		}
+	}	
+}
+return Somma;
+}
 
 
 
