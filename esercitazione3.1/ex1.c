@@ -27,8 +27,11 @@ void fibonacci(int N);
 
 
 int main(int argc, char **argv) {
+int matricola=1898085;
   int *i1 = allocaInt();
   int *i2 = allocaInt();
+inizializzaInt(i1, i2  ,matricola);
+printf("%d,%d\n",*i1,*i2);
   printf("\n");
 
   /********************************************************
@@ -77,8 +80,8 @@ int main(int argc, char **argv) {
   /********************************************************
    *                    TEST scambia puntatori            *
    ********************************************************/
-  //printf("Cambio del valore puntato da i2...\n");
-  //differenzaPuntatori(i1, i2);
+  printf("Cambio del valore puntato da i2...\n");
+  differenzaPuntatori(i1, i2);
   //printf("i2 : %d\n\n", *i2);
 
 
@@ -104,8 +107,8 @@ return p;
 }
 
 void inizializzaInt(int* i1, int* i2, int matricola){
-  //srand(matricola); // decommentare per avere sempre gli stessi due numeri (utile per debug)
-  srand(time(0)); // decommentare per avere numeri diversi ad ogni esecuzione
+  srand(matricola); // decommentare per avere sempre gli stessi due numeri (utile per debug)
+  //srand(time(0)); // decommentare per avere numeri diversi ad ogni esecuzione
   *i1=rand() % 20;
   *i2=rand() % 20;
 
@@ -173,7 +176,10 @@ void soluzioneSistemaLineare(int i1, int i2){
 }
 
 void differenzaPuntatori(int *i1, int *i2){
-  // completare
+int differenza=i1-i2;
+printf("%d\n",differenza);
+
+return;
 }
 
 void fibonacci(int N){
