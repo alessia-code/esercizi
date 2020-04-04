@@ -37,12 +37,11 @@ int main(void){
 	/********************************************************
     *              TEST seleziona_alcuni_char               *
     ********************************************************/
-/*    printf("Stampo i valori con indici idxs della stringa s...\n");
+    printf("Stampo i valori con indici idxs della stringa s...\n");
 	int dims = 4;
-	int idxs[dims] = {1, 3, 5, 11};
+	int idxs[4] = {1, 3, 5, 11};
 	seleziona_alcuni_char(s, idxs, dims);
     printf("\n");
-	*/
     /********************************************************
     *              TEST copia_con_eliminazione              *
     ********************************************************/
@@ -110,15 +109,17 @@ for (int i=0;i<N;i++){
 return copiato;
 }
 // esercizio 4.6
-/*void seleziona_alcuni_char(char s[], int idxs[], int dim){
-for (int z=0;z<dim;z++){
-	int indice=idxs[z];
-	if (s[indice]!=NULL){
-		printf("%c\n",s[indice]);	
+void seleziona_alcuni_char(char s[], int idxs[], int dim){
+int ls=strlen(s);
+for (int z=0; z<dim; z++){
+	if (idxs[z]<ls){
+		printf("%c\n",s[z]);
 	}
 }
 return;
-}*/
+}
+
+///esercizio 4.7
 char* copia_con_eliminazione(char s1[], char s2[]){
 char* eliminazione=(char*) calloc(strlen(s1),sizeof(char));
 for (int i=0;i<strlen(s1);i++){
