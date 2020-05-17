@@ -1,4 +1,3 @@
-//QUI CI SONO LE FUNZIONI UTILI
 #pragma once
 #include "scl.h"
 #include<stdio.h>

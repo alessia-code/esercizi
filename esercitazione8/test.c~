@@ -33,7 +33,7 @@ printf("\nRandom SCL list created: \n");
 		printf("ESERCIZIO 8.5\n");
 		TipoSCL ese5= getTail(scl);
 		printf("l'ultimo è %d\n",ese5->info);
-*/
+
 
 
 

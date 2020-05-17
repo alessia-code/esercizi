@@ -1,4 +1,3 @@
-//QUI CI STA LA DICHIARAZINE SCL E LE INTESTAZIONI DI FUNZIONI 
 #pragma once
 
 typedef int TipoInfoSCL;

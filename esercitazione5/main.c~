@@ -11,9 +11,9 @@ int main(int argc, char **argv) {
 	//Mat_is_symmetric(matrice);
 	//Mat_normalize_rows(matrice);
 	//printf("matrice normaalizzata\n");
-	//copia=Mat_clone(matrice);
-	//printf("matrice clonata\n");
-	//Mat_print(copia);
+	copia=Mat_clone(matrice);
+	printf("matrice clonata\n");
+	Mat_print(copia);
 
   return 0;
 }

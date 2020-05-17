@@ -1,0 +1,10 @@
+#pragma once
+#include "functions.h"
+#include "functions.c"
+#include <stdio.h>
+#include <stdlib.h>
+int main(){
+	Coda * c=codaVuota ();
+	printf("%d\n", estVuota (c));
+	return 0;
+}

@@ -1,7 +1,9 @@
+//7 qui vanno le funzioni
+
 #include <stdlib.h>
 #include <stdio.h>
 #include "functions.h"
-#include "ctype.h"
+
 
 //esercizio 7.1
 bool tuttiMinuscoli(char *s){

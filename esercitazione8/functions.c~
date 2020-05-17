@@ -24,15 +24,15 @@ TipoSCL doubledCopy( TipoSCL h ){
 	
 	while(storta!=NULL){
 		addSCL(&dritta,storta->info); //crea dritta
-		addSCL(&ris,storta->info);
+		//addSCL(&ris,storta->info);
 			storta=storta->next;
 	}
 
 	
-	/*while (dritta!=NULL){
+	while (dritta!=NULL){
 			addSCL(&ris,dritta->info);
 			dritta=dritta->next;
-	}*/
+	}
 	return ris;
 }
 

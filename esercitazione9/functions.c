@@ -1,0 +1,140 @@
+//QUI VANNO LE MIE FUNZIONI
+#include "functions.h"
+#include <stdlib.h>
+#include <stdio.h>
+
+void printINS(Insieme ins){
+	NodoSCL *p=*ins;
+	while(*p!=NULL){
+		printf("%d\n",*p->info);
+		p=p->next;
+	}return;
+}
+
+///ESERCIZIO 9.1
+Insieme insiemeVuoto(){
+	Insieme *r= (Insieme*)malloc(sizeof(Insieme));
+	*r=NULL;
+	return r;
+}
+//
+bool estVuoto(Insieme ins);{
+	return *ins==NULL;
+}
+//
+bool membro(Insieme ins , T e){
+	NodoSCL *p=*ins;
+	while(*p!=NULL){
+		if (*p->info==e)
+			return true;
+		p=p->next;
+	}
+	return false;
+}
+//
+void inserisci(Insieme *ins , T e){
+	if (!=membro(ins,e)){
+		TipoNodo* n=(TipoNodo*)malloc(sizeof(TipoNodo));
+		printf("ce sto\n");
+		n->info=e;
+		n->next=*ins;
+		*ins=n;
+		printf("ce sto2\n");
+		return;
+	}
+}
+//
+Insieme elimina(Insieme *ins , T e){
+	if (membro(ins,e)){
+		NodoSCl *n=*ins;
+		while (*n==NULL){
+			if(n->info!=e){
+				n=n->next;	
+			}
+			else{
+				*ins=n->next;
+				free(n);
+				return ins;
+			}
+		}
+	}
+}
+/*
+///ESERCIZIO 9.2
+IteratoreInsieme * creaIteratoreInsieme( Insieme * ins ){
+	ItereatoreInsieme it=(IteratoreInsieme*)malloc(sizeof(IteratoreInsieme));
+	it->ptr=*ins;
+	return it;
+}
+//
+bool hasNext ( IteratoreInsieme * it ){
+	return it->ptr!=NULL;
+}
+//
+T next ( IteratoreInsieme * it ){
+	T r=TERRORVALUE;
+	if(it->prt!=NULL){
+		r=it->ptr->info;
+		it->ptr=it->ptr->next;
+		
+	}
+	else
+		printf("ERROR\n");
+	return r;
+}
+
+//ESERCIZIO 9.3
+Insieme intersezione(Insieme a, Insieme b){
+	Insieme *ris=(Insieme*)malloc(sizeof(Insieme));
+	while (a!=NULL){
+		if (membro(b,a->info)){
+			inserisci(ris,a->info);	
+		}
+		a=a->next;
+	}
+	return ris;
+}
+//ESERCIZIO 9.4
+Insieme unione(Insieme a, Insieme b){
+	Insieme *ris=(Insieme*)malloc(sizeof(Insieme));
+	*ris=*a;
+	while (b!=NULL){
+		if(!membro(ris,b->info))
+			inserisci(ris,b->info);
+		b=b->next;
+	}
+	return ris;
+}
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

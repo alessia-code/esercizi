@@ -1,5 +1,3 @@
-//7 qui vanno le intestazioni
-
 #pragma once
 
 #include "tipo_nodo_scl.h"
